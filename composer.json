@@ -1,5 +1,5 @@
 {
-    "name": "ddev/lexted",
+    "name": "ddg/lexted",
     "description": "Various methods commonly used by the DiegoDev Group on Laravel Projects. Anyone is welcome to use, but you do so under your own risk and with no support or guarantee",
     "type": "library",
     "authors": [
@@ -15,7 +15,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Ddev\\Lexted\\LextedServiceProvider"
+                "Ddg\\Lexted\\LextedServiceProvider"
             ]
         }
     }

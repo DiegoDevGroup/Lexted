@@ -1,6 +1,6 @@
 <?php
 
-namespace Ddev\Lexted;
+namespace Ddg\Lexted;
 
 use Illuminate\Support\ServiceProvider;
 

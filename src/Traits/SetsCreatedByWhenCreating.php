@@ -1,6 +1,6 @@
 <?php
 
-namespace Ddev\Lexted\Traits;
+namespace Ddg\Lexted\Traits;
 
 trait SetsCreatedByWhenCreating
 {
