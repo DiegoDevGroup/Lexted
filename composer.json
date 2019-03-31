@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Ddg\\Permission\\": "src"
+            "Ddg\\Lexted\\": "src"
         },
         "files": [
             "src/helpers.php"
