@@ -2,8 +2,8 @@
 
 namespace Ddg\Lexted\Traits;
 
+use Ramsey\Uuid\Uuid;
 use App\Exceptions\InvalidUuidSuppliedException;
-use Webpatser\Uuid\Uuid;
 
 trait SetsUuidWhenCreating
 {
@@ -19,11 +19,11 @@ trait SetsUuidWhenCreating
             $potentiallySuppliedIdentifier = $model->{$model->getKeyName()};
 
             // if the ID has been supplied, validate it's a version 4 uuid
-            if ($potentiallySuppliedIdentifier && Uuid::import($potentiallySuppliedIdentifier)->version !== 4) {
+            if ($potentiallySuppliedIdentifier && Uuid::fromString($potentiallySuppliedIdentifier)->getVersion !== 4) {
                 throw new InvalidUuidSuppliedException('Supplied identifier is invalid');
             }
 
-            $model->{$model->getKeyName()} = $potentiallySuppliedIdentifier ?? Uuid::generate(4)->string;
+            $model->{$model->getKeyName()} = $potentiallySuppliedIdentifier ?? Uuid::uuid4()->toString();
         });
     }
 }
